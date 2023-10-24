@@ -2,6 +2,7 @@ import Searchcomponent from "./Searchcomponent";
 import DataContainer from "./DataContainer";
 import ButtonImage from "/icon-arrow.svg";
 export default function MainContainer({
+  handleInputKeyPress,
   onClick,
   onChange,
   searchValue,
@@ -14,6 +15,7 @@ export default function MainContainer({
     <div className="MainContainer">
       <h1>IP Address Tracker</h1>
       <Searchcomponent
+      handleInputKeyPress = {handleInputKeyPress}
       onClick = {onClick}
         onChange={onChange}
         searchValue={searchValue}
