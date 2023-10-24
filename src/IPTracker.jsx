@@ -12,7 +12,7 @@ export default function IPTracker() {
   const [location, setLocation] = useState();
   const [timezone, setTimezone] = useState();
   const [isp, setIsp] = useState();
-  const [searchValue, setSearchValue] = useState("88.88.177.91");
+  const [searchValue, setSearchValue] = useState("");
 
   const getData = async () => {
     console.log("getting data");
@@ -27,7 +27,6 @@ export default function IPTracker() {
     setTimezone(data.location.timezone);
     setIsp(data.isp);
   };
-  getData();
   return (
     <>
       <MainContainer
