@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+:root {
+  --color1: hsl(0, 0%, 17%);
+  --color2: hsl(0, 0%, 59%);
+  --weight1: 400;
+  --weight2: 500;
+  --weight3: 700;
+}
+.MainContainer {
+  width: 100vw;
+  height: 40vh;
+  background-image: url(/public/pattern-bg-desktop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.MapContainer {
+  width: 100vw;
+  height: 80vh;
+  background: red;
+}
+html body div#root div.MainContainer h1 {
+  color: white;
+  font-weight: var(--weight2);
+  font-size: 42px;
+  padding: 36px;
+  margin-top: 5px;
+}
+.SearchComponent {
+  width: 740px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.SearchComponent input {
+  width: 90%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  padding: 30px;
+  font-size: 24px;
+  color: var(--color1);
+}
+  .SearchComponent input:hover{
+  cursor: pointer;
+}
+.SearchComponent button {
+  width: 10%;
+  height: 100%;
+  background-color: black;
+  border-radius: 0 20px 20px 0;
+  border: none;
+}
+.SearchComponent button:hover{
+  cursor: pointer;
+  background-color: var(--color1);
+}
+.SearchComponent button img {
+  scale: 1.4;
+}
+.DataContainer {
+  width: 1480px;
+  height: 220px;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(52%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.DataBlock{
+  height: 100%;
+  width: 25%;
+  padding-right: 70px;
+}
+.DataBlock h2{
+  color: var(--color2);
+  margin-left: 42px;
+  letter-spacing: 2px;
+  font-size: 17px;
+  margin-top: 50px;
+}
+div.DataBlock h3{
+font-size: 34px;
+font-weight: var(--weight2);
+color: var(--color1);
+padding-left: 42px;
+padding-top: 17px;
+word-break: break-all;
+}
+.Divider{
+  height: 47%;
+  width: 1px;
+  background-color: var(--color2);
+  opacity: 0.5;
+}
