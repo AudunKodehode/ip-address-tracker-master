@@ -15,8 +15,8 @@ export default function MainContainer({
     <div className="MainContainer">
       <h1>IP Address Tracker</h1>
       <Searchcomponent
-      handleInputKeyPress = {handleInputKeyPress}
-      onClick = {onClick}
+        handleInputKeyPress={handleInputKeyPress}
+        onClick={onClick}
         onChange={onChange}
         searchValue={searchValue}
         buttonImage={ButtonImage}

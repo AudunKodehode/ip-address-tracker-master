@@ -64,7 +64,7 @@ html body div#root div.MainContainer h1 {
   scale: 1.4;
 }
 .DataContainer {
-  width: 1480px;
+  width: 77%;
   height: 220px;
   background: white;
   position: absolute;
@@ -74,6 +74,7 @@ html body div#root div.MainContainer h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 .DataBlock {
   height: 100%;
@@ -106,4 +107,55 @@ div.DataBlock h3 {
   height: 60vh;
   width: 100%;
   background-color: aquamarine;
+  z-index: -2;
+}
+.pigeon-click-block{
+  background-image: url(/public/icon-location.svg);
+  background-repeat: no-repeat;
+}
+.pigeon-attribution{
+  display:none;
+}
+
+
+@media screen and (max-width: 1280px) {
+  div.DataContainer {
+    display:flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
+  transform: translateY(58%);
+  width: 85%;
+  padding-bottom: 20px;
+  }
+  .DataBlock{
+    padding: 0;
+    width: 75%;
+    text-align: center;
+  }
+  div.DataBlock h3  {
+    padding: 0;
+    font-size: 20px;
+
+  }
+  div.DataBlock h2{
+    font-size: 12px;
+    text-align: center;
+    margin: 12px ;
+  }
+  .SearchComponent{
+    width: 90%;
+  }
+  html body div#root div.MainContainer h1{
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 420px) {
+  html body div#root div.MainContainer h1{
+    font-size: 25px;
+  }
+  div.DataContainer{
+  transform: translateY(50%);
+  }
 }

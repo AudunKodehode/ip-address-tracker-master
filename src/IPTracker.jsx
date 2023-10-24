@@ -7,9 +7,9 @@ export default function IPTracker() {
   const [location, setLocation] = useState();
   const [timezone, setTimezone] = useState();
   const [isp, setIsp] = useState();
-  const [searchValue, setSearchValue] = useState("88.88.177.91");
-  const [lat, setLat] = useState();
-  const [lon, setLon] = useState();
+  const [searchValue, setSearchValue] = useState("");
+  const [lat, setLat] = useState(59.26517526667629);
+  const [lng, setLng] = useState(10.405212121419579);
 
   const getData = async () => {
     console.log("getting data");
@@ -17,7 +17,7 @@ export default function IPTracker() {
     const apiKey = "at_mGcPSVUJJlW4V5uY9chjyqr1RY2k8";
     const ipSearch = "&ipAddress=";
     const domainSearch = "&domain=";
-    let fetchUrl = ipApiUrl + apiKey + ipSearch + searchValue;
+    let fetchUrl = ipApiUrl + apiKey + domainSearch + searchValue;
     const response = await fetch(fetchUrl);
     const data = await response.json();
     console.log(data);
@@ -26,9 +26,8 @@ export default function IPTracker() {
     setTimezone(data.location.timezone);
     setIsp(data.isp);
     setLat(data.location.lat);
-    setLon(data.location.lng);
+    setLng(data.location.lng);
   };
-
 
   const handleInputChange = (event) => {
     setSearchValue(event.target.value);
@@ -57,7 +56,7 @@ export default function IPTracker() {
         timezone={timezone}
         isp={isp}
       />
-      <MapApiContainer />
+      <MapApiContainer lat={lat} lng={lng} />
     </>
   );
 }
