@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Map, Marker } from "pigeon-maps";
-
+import iconLocation from "/icon-location.svg"; 
 export default function MapApiContainer({ lat, lng }) {
   const [mapCenter, setMapCenter] = useState([lat, lng]);
 
@@ -13,7 +13,7 @@ export default function MapApiContainer({ lat, lng }) {
       <Map center={mapCenter} defaultZoom={11}>
         <Marker anchor={mapCenter}>
           <img
-            src="/public/icon-location.svg"
+            src={iconLocation}
             width={50}
             alt="Location Marker"
           />
