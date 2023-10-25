@@ -1,5 +1,5 @@
-import MainContainer from "./components/MainContainer";
-import MapApiContainer from "./components/MapApiContainer";
+import MainContainer from "./MainContainer";
+import MapApiContainer from "./MapApiContainer";
 import { useState } from "react";
 
 export default function IPTracker() {

@@ -1,4 +1,4 @@
-import DataBlock from "./Datablock";
+import DataBlock from "./DataBlock";
 import Divider from "./Divider";
 
 export default function DataContainer({ ipAddress, location, timezone, isp }) {

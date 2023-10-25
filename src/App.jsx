@@ -1,4 +1,4 @@
-import IPTracker from "./IPTracker";
+import IPTracker from "./components/IPTracker";
 function App() {
   return (
     <>
